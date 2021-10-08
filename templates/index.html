@@ -28,7 +28,28 @@
 </head>
 
 <body>
-
+    <div>
+        <div class="form">
+            <form class="container" action="{{ url_for('index')}}" method="post">
+                <input type="radio" id="any" name="catagory" value="Any" checked>
+                <label for="any">Any</label>
+                <input type="radio" id="programming" name="catagory" value="Programming">
+                <label for="programming">Programming</label>
+                <input type="radio" id="misc" name="catagory" value="Misc">
+                <label for="misc">Misc</label>
+                <input type="radio" id="dark" name="catagory" value="Dark">
+                <label for="dark">Dark</label>
+                <input type="radio" id="pun" name="catagory" value="Pun">
+                <label for="pun">Pun</label>
+                <input type="radio" id="spooky" name="catagory" value="Spooky">
+                <label for="spooky">Spooky</label>
+                <input type="radio" id="christmas" name="catagory" value="Christmas">
+                <label for="christmas">Christmas</label>
+                <button type="submit">Send Request</button>
+                <br>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
