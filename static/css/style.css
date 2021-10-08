@@ -24,6 +24,10 @@ body {
     font-family: "Audiowide", Helvetica, sans-serif;
 }
 
+.bella-ciao {
+    text-align: center;
+}
+
 .container{
     text-align: center;
 }
@@ -33,6 +37,12 @@ body {
     margin: 80px;
     color: greenyellow;
     font-size: 60%;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    margin-top: 20px;
 }
 
 .textarea {
