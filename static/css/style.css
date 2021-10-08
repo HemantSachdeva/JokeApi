@@ -1,5 +1,6 @@
 /*
     Copyright (C) 2021 Hemant Sachdeva <hemant.evolver@gmail.com>
+    Copyright (C) 2021 Amrinder Singh <amrindersingh1703@gmail.com>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as
@@ -15,6 +16,31 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
 body {
     background-color: black;
+    font-size: 30px;
+    font-family: "Audiowide", Helvetica, sans-serif;
+}
+
+.container{
+    text-align: center;
+}
+
+.form {
+    align-content: center;
+    margin: 80px;
+    color: greenyellow;
+    font-size: 60%;
+}
+
+.textarea {
+    font-family: "Audiowide", Helvetica, sans-serif;
+    width: 70%;
+    margin-top: 100px;
+    border: 1px solid greenyellow;
+    color: greenyellow;
+    background-color: black;
+    white-space: normal;
 }
