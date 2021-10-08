@@ -16,18 +16,31 @@
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import sys
+import requests
 
 try:
-    from flask import Flask, render_template
+    from flask import Flask, request, render_template
 except ImportError:
     sys.exit("[!] Flask module not found. Install it by 'pip3 install flask'")
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
+    if request.method == 'POST':
+        cat = request.form.get('catagory')
+        url = "https://v2.jokeapi.dev/joke/{}".format(cat)
+        resp = requests.get(url)
+        data = resp.json()
+        if data.get('type') == 'single':
+            joke = data.get('joke') + '\n\n'
+            return render_template('index.html', showJoke=joke)
+        else:
+            joke = data.get('setup') + "\n\n" + data.get('delivery')
+            return render_template('index.html', showJoke=joke)
+    else:
+        return render_template('index.html')
 
 
 if __name__ == '__main__':
