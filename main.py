@@ -30,7 +30,10 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         cat = request.form.get('catagory')
-        url = "https://v2.jokeapi.dev/joke/{}".format(cat)
+        flag = request.form.getlist('flag')
+        flag = ','.join(flag)  # making flag list a ',' separated string
+        url = "https://v2.jokeapi.dev/joke/{}?blacklistFlags={}".format(
+            cat, flag)
         resp = requests.get(url)
         data = resp.json()
         if data.get('type') == 'single':
