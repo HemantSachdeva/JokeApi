@@ -51,6 +51,11 @@ img {
     margin-top: 20px;
 }
 
+.jokeApiBanner {
+    margin-left: 5px;
+    margin-top: -85px;
+}
+
 .textarea {
     font-family: "Audiowide", Helvetica, sans-serif;
     width: 70%;
