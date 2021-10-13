@@ -28,6 +28,14 @@ body {
     text-align: center;
 }
 
+.box {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    bottom: 182px;
+}
+
 .container{
     text-align: center;
 }

@@ -31,43 +31,46 @@
     <div class="jokeApiBanner">
         <img src="/static/assets/JokeApi.gif" alt="JokeApi">
     </div>
-    <div>
-        <div class="form">
-            <h1 class="heading">CATEGORIES</h1>
-            <form class="container" action="{{ url_for('index')}}" method="post">
-                <input type="radio" id="any" name="catagory" value="Any" checked>
-                <label for="any">Any</label>
-                <input type="radio" id="programming" name="catagory" value="Programming">
-                <label for="programming">Programming</label>
-                <input type="radio" id="misc" name="catagory" value="Misc">
-                <label for="misc">Misc</label>
-                <input type="radio" id="dark" name="catagory" value="Dark">
-                <label for="dark">Dark</label>
-                <input type="radio" id="pun" name="catagory" value="Pun">
-                <label for="pun">Pun</label>
-                <input type="radio" id="spooky" name="catagory" value="Spooky">
-                <label for="spooky">Spooky</label>
-                <input type="radio" id="christmas" name="catagory" value="Christmas">
-                <label for="christmas">Christmas</label>
-                <h1 class="heading">BLACKLIST</h1>
-                <input type="checkbox" id="nsfw" name="flag" value="nsfw">
-                <label for="nsfw">NSFW</label>
-                <input type="checkbox" id="religious" name="flag" value="religious">
-                <label for="religious">Religious</label>
-                <input type="checkbox" id="political" name="flag" value="political">
-                <label for="political">Political</label>
-                <input type="checkbox" id="racist" name="flag" value="racist">
-                <label for="racist">Racist</label>
-                <input type="checkbox" id="sexist" name="flag" value="sexist">
-                <label for="sexist">Sexist</label>
-                <input type="checkbox" id="explicit" name="flag" value="explicit">
-                <label for="explicit">Explicit</label>
-                <button type="submit">Send Request</button>
-                <br>
-                <textarea name="showJoke" rows="15" class="textarea">{% if showJoke %}{{showJoke}}{% endif %}</textarea>
-            </form>
-            <div class="bella-ciao">
-                <img src="/static/assets/bg.jpg" alt="bella-ciao">
+    <div class="box">
+        <div>
+            <div class="form">
+                <h1 class="heading">CATEGORIES</h1>
+                <form class="container" action="{{ url_for('index')}}" method="post">
+                    <input type="radio" id="any" name="catagory" value="Any" checked>
+                    <label for="any">Any</label>
+                    <input type="radio" id="programming" name="catagory" value="Programming">
+                    <label for="programming">Programming</label>
+                    <input type="radio" id="misc" name="catagory" value="Misc">
+                    <label for="misc">Misc</label>
+                    <input type="radio" id="dark" name="catagory" value="Dark">
+                    <label for="dark">Dark</label>
+                    <input type="radio" id="pun" name="catagory" value="Pun">
+                    <label for="pun">Pun</label>
+                    <input type="radio" id="spooky" name="catagory" value="Spooky">
+                    <label for="spooky">Spooky</label>
+                    <input type="radio" id="christmas" name="catagory" value="Christmas">
+                    <label for="christmas">Christmas</label>
+                    <h1 class="heading">BLACKLIST</h1>
+                    <input type="checkbox" id="nsfw" name="flag" value="nsfw">
+                    <label for="nsfw">NSFW</label>
+                    <input type="checkbox" id="religious" name="flag" value="religious">
+                    <label for="religious">Religious</label>
+                    <input type="checkbox" id="political" name="flag" value="political">
+                    <label for="political">Political</label>
+                    <input type="checkbox" id="racist" name="flag" value="racist">
+                    <label for="racist">Racist</label>
+                    <input type="checkbox" id="sexist" name="flag" value="sexist">
+                    <label for="sexist">Sexist</label>
+                    <input type="checkbox" id="explicit" name="flag" value="explicit">
+                    <label for="explicit">Explicit</label>
+                    <button type="submit">Send Request</button>
+                    <br>
+                    <textarea name="showJoke" rows="15"
+                        class="textarea">{% if showJoke %}{{showJoke}}{% endif %}</textarea>
+                </form>
+                <div class="bella-ciao">
+                    <img src="/static/assets/bg.jpg" alt="bella-ciao">
+                </div>
             </div>
         </div>
     </div>
