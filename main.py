@@ -29,7 +29,8 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        cat = request.form.get('catagory')
+        cat = request.form.getlist('catagory')
+        cat = ','.join(cat)  # making cat list a ',' separated string
         flag = request.form.getlist('flag')
         flag = ','.join(flag)  # making flag list a ',' separated string
         url = "https://v2.jokeapi.dev/joke/{}?blacklistFlags={}".format(
