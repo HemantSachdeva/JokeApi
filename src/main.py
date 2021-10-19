@@ -36,7 +36,7 @@ def index():
         resp = requests.get(url)
         data = resp.json()
         if data.get('type') == 'single':
-            joke = data.get('joke') + '\n\n'
+            joke = data.get('joke')
             return render_template('index.html', showJoke=joke)
         else:
             joke = data.get('setup') + "\n\n" + data.get('delivery')
