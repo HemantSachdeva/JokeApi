@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 #   Copyright (C) 2021 Hemant Sachdeva <hemant.evolver@gmail.com>
 
 #   This program is free software: you can redistribute it and/or modify
@@ -45,7 +43,3 @@ def index():
             return render_template('index.html', showJoke=joke)
     else:
         return render_template('index.html')
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
