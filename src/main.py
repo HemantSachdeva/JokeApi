@@ -27,16 +27,16 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        cat = request.form.getlist('catagory')
-        if cat:
-            cat = ','.join(cat)  # making cat list a ',' separated string
-            url = "https://v2.jokeapi.dev/joke/{}".format(cat)
-        else:
-            url = "https://v2.jokeapi.dev/joke/Any"
-        flag = request.form.getlist('flag')
-        if flag:
-            flag = ','.join(flag)  # making flag list a ',' separated string
-            url += '?blacklistFlags={}'.format(flag)
+        joke_category = request.form.getlist('catagory')
+        # set joke category to Any if no category chosen, make ',' separated string otherwise
+        joke_category = 'Any' if len(joke_category) == 0 else ','.join(joke_category)
+        url = "https://v2.jokeapi.dev/joke/{}".format(joke_category)
+
+        blacklist_joke = request.form.getlist('flag')
+        if len(blacklist_joke) != 0:
+            # making flag list a ',' separated string if multiple blacklists chosen
+            blacklist_joke = ','.join(blacklist_joke)
+            url += '?blacklistFlags={}'.format(blacklist_joke)
         resp = requests.get(url)
         data = resp.json()
         if data.get('type') == 'single':
