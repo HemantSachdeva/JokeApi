@@ -14,12 +14,13 @@
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import sys
-import requests
 
 try:
+    import requests
     from flask import Flask, request, render_template
 except ImportError:
-    sys.exit("[!] Flask module not found. Install it by 'pip3 install flask'")
+    sys.exit("[!] Please install the required modules: requests, flask by running \
+    'pip3 install -r requirements.txt'")
 
 app = Flask(__name__)
 
@@ -29,7 +30,8 @@ def index():
     if request.method == 'POST':
         joke_category = request.form.getlist('catagory')
         # set joke category to Any if no category chosen, make ',' separated string otherwise
-        joke_category = 'Any' if len(joke_category) == 0 else ','.join(joke_category)
+        joke_category = 'Any' if len(
+            joke_category) == 0 else ','.join(joke_category)
         url = "https://v2.jokeapi.dev/joke/{}".format(joke_category)
 
         blacklist_joke = request.form.getlist('flag')
