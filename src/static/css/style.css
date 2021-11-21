@@ -31,9 +31,8 @@ body {
 .box {
     position: relative;
     align-items: center;
-    display: flex;
     justify-content: center;
-    bottom: 182px;
+    margin-top: -50px;
 }
 
 .container{
@@ -42,9 +41,11 @@ body {
 
 .form {
     align-content: center;
-    margin: 80px;
+    margin-left: auto;
+    margin-right: auto;
     color: greenyellow;
     font-size: 60%;
+    width: 100%;
 }
 
 .glow-on-hover {
@@ -124,11 +125,20 @@ img {
 
 .jokeApiBanner {
     margin-left: 5px;
-    margin-top: -85px;
+    margin-top: -50px;
+    position: relative;
+    top: 0;
+}
+
+@media (min-width:1000px){
+    .textarea{
+        width:50%;
+    }
 }
 
 .textarea {
-    font-family: "Audiowide", Helvetica, sans-serif;
+    font-family: inherit;
+    font-size: 70%;
     width: 70%;
     margin-top: 50px;
     border: 1px solid greenyellow;
