@@ -4,7 +4,7 @@
 
 [![GitHub](https://img.shields.io/github/license/HemantSachdeva/JokeApi?style=plastic)](https://github.com/HemantSachdeva/JokeApi/blob/main/LICENSE.md)
 ![GitHub repo size](https://img.shields.io/github/repo-size/HemantSachdeva/JokeApi?style=plastic)
-![Lines of code](https://img.shields.io/tokei/lines/GitHub/HemantSachdeva/JokeApi?style=plastic)
+![Lines of code](https://img.shields.io/tokei/lines/GitHub/HemantSachdeva/JokeApi?style=plastic&label=lines%20of%20code)
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/HemantSachdeva/JokeApi?style=plastic)
 
 # What is this repo about?
